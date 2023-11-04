@@ -15,10 +15,10 @@ export default function HomePage() {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          Explore the power of AI
+          Healthy Plants for a Healthy Planet
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Chat with the smartest AI - Experience the power of AI
+        Cultivate Healthier Gardens with AI: Detect, Defend, Thrive
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
@@ -36,6 +36,19 @@ export default function HomePage() {
           </Card>
         ))}
       </div>
+      <br />
+      <div className="bg-gray-100 p-4 rounded-lg w-4/5 mx-auto">
+  <p>
+    Discover how PlantGuard Pro can help you maintain thriving gardens and prevent plant diseases.
+  </p>
+  <p>
+    Explore our knowledge base or get started now!
+  </p>
+</div>
+
+
+          
+
     </div>
   );
 }

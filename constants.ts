@@ -1,41 +1,29 @@
-import { Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
+import { Code, ImageIcon, Leaf, LeafIcon, LeafyGreen, LeafyGreenIcon, MessageSquare, Music, PlaneTakeoff, ThumbsUpIcon, VideoIcon } from "lucide-react";
+import { Love_Light } from "next/font/google";
 
-export const MAX_FREE_COUNTS = 5;
+export const MAX_FREE_COUNTS = 100;
 
 export const tools = [
   {
-    label: 'Conversation',
-    icon: MessageSquare,
+    label: 'Plant Disease Detection',
+    icon: Leaf,
     href: '/conversation',
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
   },
   {
-    label: 'Music Generation',
-    icon: Music,
+    label: 'Preventive Measures',
+    icon: LeafyGreen,
     href: '/music',
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
   },
   {
-    label: 'Image Generation',
-    icon: ImageIcon,
+    label: 'Remedies and Treatment',
+    icon: LeafIcon,
     color: "text-pink-700",
     bgColor: "bg-pink-700/10",
     href: '/image',
   },
-  {
-    label: 'Video Generation',
-    icon: VideoIcon,
-    color: "text-orange-700",
-    bgColor: "bg-orange-700/10",
-    href: '/video',
-  },
-  {
-    label: 'Code Generation',
-    icon: Code,
-    color: "text-green-700",
-    bgColor: "bg-green-700/10",
-    href: '/code',
-  },
+  
 ];
