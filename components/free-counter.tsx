@@ -1,51 +1,35 @@
-import { Zap } from "lucide-react";
 import { useEffect, useState } from "react";
-
-import { MAX_FREE_COUNTS } from "@/constants";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { useProModal } from "@/hooks/use-pro-modal";
 
-export const FreeCounter = ({
-  isPro = false,
-  apiLimitCount = 0,
-}: {
-  isPro: boolean,
-  apiLimitCount: number
-}) => {
-  const [mounted, setMounted] = useState(false);
-  const proModal = useProModal();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
+const features = [
+  {
+    title: "Plants Disease Detection",
+    content: (
+      <>
+        <p>Monitoring Plants health with Healthy Plants AI</p>
+        
+        
+        <div className="mt-2">
+          <a href="//link" target="_blank" rel="noopener noreferrer">AI Model</a> |{" "}
+          <a href="//link" target="_blank" rel="noopener noreferrer">Docs</a> |{" "}
+          <a href="//code-link" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
+      </>
+    ),
   }
-  
+];
 
-  if (isPro) {
-    return null;
-  }
-
+export const FreeCounter = () => {
   return (
     <div className="px-3">
-      <Card className="bg-white/10 border-0">
-        <CardContent className="py-6">
-          <div className="text-center text-sm text-white mb-4 space-y-2">
-            <p>
-              {apiLimitCount} / {MAX_FREE_COUNTS} Free Generations
-            </p>
-            <Progress className="h-3" value={(apiLimitCount / MAX_FREE_COUNTS) * 100} />
-          </div>
-          <Button onClick={proModal.onOpen} variant="premium" className="w-full">
-            Upgrade
-            <Zap className="w-4 h-4 ml-2 fill-white" />
-          </Button>
-        </CardContent>
-      </Card>
+      {features.map((feature) => (
+        <Card key={feature.title} className="bg-[#192339] border-none text-white mb-4">
+          <CardContent className="py-3">
+            <h3 className="text-sm font-semibold">{feature.title}</h3>
+            {feature.content}
+          </CardContent>
+        </Card>
+      ))}
     </div>
-  )
-}
+  );
+};
