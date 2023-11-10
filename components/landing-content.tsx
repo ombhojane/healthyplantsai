@@ -2,45 +2,36 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const testimonials = [
+const features = [
   {
-    name: "Joel",
-    avatar: "J",
-    title: "Software Engineer",
-    description: "This is the best application I've ever used!",
+    title: "Image to Plant Disease Detection",
+    description: "Effortlessly identify plant diseases by uploading images for quick and accurate diagnosis.",
   },
   {
-    name: "Antonio",
-    avatar: "A",
-    title: "Designer",
-    description: "I use this daily for generating new photos!",
+    title: "Preventive Measures",
+    description: "Receive proactive suggestions to prevent the occurrence of plant diseases and maintain overall plant health.",
   },
   {
-    name: "Mark",
-    avatar: "M",
-    title: "CEO",
-    description: "This app has changed my life, cannot imagine working without it!",
+    title: "Remedies and Treatments",
+    description: "Access detailed information on remedies and treatments for specific plant diseases, ensuring effective solutions.",
   },
   {
-    name: "Mary",
-    avatar: "M",
-    title: "CFO",
-    description: "The best in class, definitely worth the premium subscription!",
+    title: "Useful Articles",
+    description: "Explore a wealth of articles covering various aspects of plant health, diseases, and gardening tips for a comprehensive knowledge base.",
   },
 ];
 
 export const LandingContent = () => {
   return (
     <div className="px-10 pb-20">
-      <h2 className="text-center text-4xl text-white font-extrabold mb-10">Testimonials</h2>
+      <h2 className="text-center text-4xl text-white font-extrabold mb-10">Features</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {testimonials.map((item) => (
-          <Card key={item.description} className="bg-[#192339] border-none text-white">
+        {features.map((item) => (
+          <Card key={item.title} className="bg-[#192339] border-none text-white">
             <CardHeader>
               <CardTitle className="flex items-center gap-x-2">
                 <div>
-                  <p className="text-lg">{item.name}</p>
-                  <p className="text-zinc-400 text-sm">{item.title}</p>
+                  <p className="text-lg">{item.title}</p>
                 </div>
               </CardTitle>
               <CardContent className="pt-4 px-0">
@@ -52,4 +43,4 @@ export const LandingContent = () => {
       </div>
     </div>
   )
-}
+};

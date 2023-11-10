@@ -14,7 +14,7 @@ export const tools = [
   {
     label: 'Preventive Measures',
     icon: LeafyGreen,
-    href: '/music',
+    href: '/image',
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
   },
@@ -23,7 +23,7 @@ export const tools = [
     icon: LeafIcon,
     color: "text-pink-700",
     bgColor: "bg-pink-700/10",
-    href: '/image',
+    href: '/video',
   },
   
 ];
