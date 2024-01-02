@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Montserrat } from 'next/font/google'
-import { Code, ImageIcon, Info, LayoutDashboard, Leaf, LeafIcon, LeafyGreen, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
+import { CameraIcon, Code, ImageIcon, Info, LayoutDashboard, Leaf, LeafIcon, LeafyGreen, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
@@ -23,6 +23,12 @@ const routes = [
     icon: LeafIcon,
     href: '/conversation',
     color: "text-violet-500",
+  },
+  {
+    label: 'Disease Detection using Vision',
+    icon: CameraIcon,
+    href: '/code',
+    color: "text-red-600",
   },
   {
     label: 'Preventive Measures',

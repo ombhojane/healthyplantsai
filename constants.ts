@@ -1,4 +1,4 @@
-import { Code, ImageIcon, Leaf, LeafIcon, LeafyGreen, LeafyGreenIcon, MessageSquare, Music, PlaneTakeoff, ThumbsUpIcon, VideoIcon } from "lucide-react";
+import { CameraIcon, Code, ImageIcon, Leaf, LeafIcon, LeafyGreen, LeafyGreenIcon, MessageSquare, Music, PlaneTakeoff, PlaneTakeoffIcon, ThumbsUpIcon, VideoIcon } from "lucide-react";
 import { Love_Light } from "next/font/google";
 
 export const MAX_FREE_COUNTS = 100;
@@ -10,6 +10,13 @@ export const tools = [
     href: '/conversation',
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
+  },
+  {
+    label: 'Plant Disease Detection using Vision',
+    icon: CameraIcon,
+    href: '/code',
+    color: "text-red-600",
+    bgColor: "bg-red-600/10",
   },
   {
     label: 'Preventive Measures',
